@@ -17,11 +17,13 @@
 3. 如果 sum > 0 说明对结果有正向的影响，sum与数组中下一位元素相加  sum += num
 4. 每次比较 当前数组之和sum 和ans的大小 将较大的值 赋给ans
 5. 最大连续和 的数组 永远以正数开始 
+6. 时间复杂度 O(n) 只需要遍历一遍数组即可 空间复杂度 O(1)常数级别的空间
+7. for of 与 for in的区别, for of一般用于遍历数组 num 就代表数组中的元素值, for in一般用于遍历对象 num代表的是数组的下标 nums[num] 才可以访问 数组元素具体的值
 
         function maxSubArray (nums){
             var ans = nums[0]
             var sum = 0
-            for (num in nums ){
+            for (const num of nums ){
                 if(sum > 0 ){
                     sum += num
                 }else{
